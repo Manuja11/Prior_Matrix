@@ -2,7 +2,7 @@
 import xlwings as xw
 
 ## open the main excel workbook (BEST Prioritization Matrix) placed in sharepoint
-master_wb = xw.Book(r"C:\Users\u130628\Straumann Group\BEST Internal Team - EPIC SWI's and Info\BEST Prioritization Matrix\BEST Prioritization Matrix V2.xlsx")
+master_wb = xw.Book(r"C:\Users\u130628\Straumann Group\BEST Internal Team - Miscellaneous Documents\BEST Prioritization Matrix V2.xlsx")
 
 ## create a new variable to list sheets within main excel workbook
 master_sheets = master_wb.sheets
@@ -11,7 +11,7 @@ master_sheets = master_wb.sheets
 master_sheet_col = master_sheets[1].range('A:A')[4:].value
 
 ## open excel workbook with EPIC data downloaded from sharepoint
-epicdata_wb = xw.Book(r"C:\Users\u130628\Downloads\EPIC_Data.xlsx")
+epicdata_wb = xw.Book(r"C:\Users\u130628\Straumann Group\BEST Internal Team - Miscellaneous Documents\EPIC_Data.xlsx")
 
 ## create a new list variable to get data from all three columns from row 2
 epicdata_raw = epicdata_wb.sheets[1].range('A2').expand().value
